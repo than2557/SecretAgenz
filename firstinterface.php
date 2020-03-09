@@ -1,19 +1,35 @@
-<!DOCTYPE html><html class="menu">
+
 <html>
-
-<head>
-
+    <head>
 <meta charset="utf-8"/>
 <meta http-equiv="X-UA-Compatible" content=="IE=edge"/>
 <meta name="google" value="notranslate"/>
 <link rel="stylesheet" href="css/stylefirstinterface.css">
-<link rel="icon" type="img/png" href="img/icon.jpg" />
-    <title>secretagenz</title>
-<link rel="stylesheet" type="text/css" href="css/menu.css">
 <link rel="stylesheet" type="text/css" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
 <script src="js/linktofristinterface.js"></script>
-  
- 
+
+<link rel="icon" type="img/png" href="img/icon.jpg" />
+    <title>secretagenz</title>
+
+
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+  <script>
+
+$(".button").click(function() {
+    var buttonId = $(this).attr("id");
+    $("#modal-container")
+        .removeAttr("class")
+        .addClass(buttonId);
+    $("body").addClass("modal-active");
+});
+
+$("#modal-container").click(function() {
+    $(this).addClass("out");
+    $("body").removeClass("modal-active");
+});
+  </script>
 
 
 
@@ -36,16 +52,16 @@
 <ul>
   
 <li>                                   
-<a href="">
+<a onclick="home()">
 <i class="fa fa-home fa-lg"></i>
-<span class="nav-text" onclick="home()">Home</span>
+<span class="nav-text">Home</span>
 </a>
 </li>   
    
 <li>                                 
-<a href="">
-<i class="fa fa-user fa-lg"></i>
-<span class="nav-text">Login</span>
+<a  onclick="login()">
+<i class="fa fa-sign-in fa-lg"></i>
+<span class="nav-text">login</span>
 </a>
 </li>   
 
@@ -74,10 +90,8 @@ margin-left: 56px;top:3px;">
    
 
 </div>
- 
-                        </span>
-                        
-                    </a>
+  </span>
+    </a>
 
 </li>
                             
@@ -191,8 +205,7 @@ margin-left: 56px;top:3px;">
         </nav>
         
   
-
-			
+     
   
   
 </body>
